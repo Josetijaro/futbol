@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fútbol Total</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/53/53283.png">
+  <link rel="stylesheet" href="styleI.css">
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">Fútbol<span>Total</span></div>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="partidos.html">Partidos</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="tabla.html">Tabla</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-card">
+      <h1>Vive el fútbol como nunca</h1>
+      <p>Resultados en vivo, noticias, estadísticas y toda la pasión del deporte rey en un solo lugar.</p>
+      <div class="cta">
+        <a href="pvivo.html"> <button class="btn" onclick="alerta()">Ver partidos</button></a>
+        <button class="btn secondary" onclick="window.location.href='noticias.html'">Últimas noticias</button>
+      </div>
+    </div>
+    <div class="score">
+      <div class="team">
+        <img src="Real_Madrid_CF.svg.png" alt="Equipo A">
+        <div class="meta">Real Madrid</div>
+      </div>
+      <div class="vs" id="marcador">2 : 1</div>
+      <div class="team">
+        <img src="83.png" alt="Equipo B">
+        <div class="meta">Barcelona</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid" >
+      <div class="card" onclick="window.location.href='clasicoE.html'">
+        <span class="badge">EN VIVO</span>
+        <div class="title">Clásico emocionante</div>
+        <div class="meta">Min 78 • Camp Nou</div>
+      </div>
+      <div class="card" onclick="window.location.href='fichajes.html'">
+        <span class="badge">NOTICIA</span>
+        <div class="title">Fichaje estrella</div>
+        <div class="meta">Mercado de verano</div>
+      </div>
+      <div class="card" onclick="window.location.href='tabla.html'">
+        <span class="badge">TABLA</span>
+        <div class="title">Líder del torneo</div>
+        <div class="meta">Jornada 12</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Fútbol Total • Hecho con pasión ⚽
+  </footer>
+
+  <script src="scriptI.js"></script>
+</body>
+</html>

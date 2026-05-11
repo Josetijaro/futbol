@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificación LaLiga 2026 | Fútbol Total</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/53/53283.png">
+    <link rel="stylesheet" href="styleT.css">
+</head>
+<body>
+
+<header class="main-nav">
+    <div class="nav-container">
+        <div class="logo" onclick="window.location.href='index.html'">Fútbol<span>Total</span></div>
+        <div class="nav-links">
+            <a onclick="window.location.href='index.html'">Inicio</a>
+            <a onclick="window.location.href='noticias.html'">Noticias</a>
+            <a onclick="window.location.href='partidos.html'">Partidos</a>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <div class="header-section">
+        <h1>Clasificación</h1>
+        <p>Temporada 2025/26 • Jornada 37 de 38</p>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th class="pos">Pos</th>
+                    <th>Equipo</th>
+                    <th class="hide-mobile">PJ</th>
+                    <th class="hide-mobile">V</th>
+                    <th class="hide-mobile">DG</th>
+                    <th class="pts-col">PTS</th>
+                </tr>
+            </thead>
+            <tbody id="table-content">
+                </tbody>
+        </table>
+    </div>
+
+    <div class="legend">
+        <div class="l-item"><span class="dot" style="background: var(--ucl)"></span> UEFA Champions League</div>
+        <div class="l-item"><span class="dot" style="background: var(--uel)"></span> UEFA Europa League</div>
+        <div class="l-item"><span class="dot" style="background: var(--uecl)"></span> Conference League</div>
+        <div class="l-item"><span class="dot" style="background: var(--descenso)"></span> Descenso</div>
+    </div>
+</main>
+
+<script src="scriptT.js"></script>
+
+</body>
+</html>

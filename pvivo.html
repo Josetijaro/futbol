@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>En Directo | Fútbol Total</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleV.css">
+   
+</head>
+<body>
+
+<header class="main-nav">
+    <div class="nav-container">
+        <div class="logo" onclick="window.location.href='index.html'">Fútbol<span>Total</span></div>
+        <div class="nav-links">
+            <a onclick="window.location.href='index.html'">Inicio</a>
+            <a onclick="window.location.href='partidos.html'">Calendario</a>
+            <a onclick="window.location.href='clasificacion.html'">Clasificación</a>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <main>
+        <div class="video-section">
+            <div class="video-placeholder">
+                <span class="live-tag">● EN DIRECTO</span>
+                <span style="font-size: 50px; cursor: pointer;">▶️</span>
+                <p style="color: var(--muted); margin-top: 15px;">Señal en alta definición habilitada</p>
+            </div>
+            
+            <div class="match-detail">
+                <div class="match-score">
+                    <div class="team-box">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg" alt="Real Madrid" class="team-logo">
+                        <h3 style="margin:0; font-size: 1.1rem;">Real Madrid</h3>
+                    </div>
+
+                    <div class="score-display">2 - 1</div>
+
+                    <div class="team-box">
+                        <img src="83.png" alt="FC Barcelona" class="team-logo">
+                        <h3 style="margin:0; font-size: 1.1rem;">FC Barcelona</h3>
+                    </div>
+                </div>
+                <p style="text-align: center; color: var(--green); font-weight: bold; letter-spacing: 1px;">Minuto 74' - LaLiga Jornada 37</p>
+            </div>
+        </div>
+    </main>
+
+    <aside class="sidebar">
+        <div class="side-card">
+            <h4 style="margin-top: 0; border-bottom: 1px solid #1f2937; padding-bottom: 10px;">Estadísticas en Vivo</h4>
+            <div class="stat-row">
+                <div class="stat-labels"><span>Posesión</span><span>55% - 45%</span></div>
+                <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 55%"></div></div>
+            </div>
+            <div class="stat-row">
+                <div class="stat-labels"><span>Remates</span><span>12 - 8</span></div>
+                <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 60%"></div></div>
+            </div>
+        </div>
+
+        <div class="side-card">
+            <h4 style="margin-top: 0;">Fan Chat</h4>
+            <div class="chat-box">
+                <div class="chat-msg"><b>Madridista88:</b> ¡Hala Madrid! Vaya golazo.</div>
+                <div class="chat-msg"><b>Culé_Forever:</b> Penalti claro no pitado...</div>
+                <div class="chat-msg"><b>Futbolero:</b> El ritmo del partido es increíble.</div>
+            </div>
+            <input type="text" placeholder="Escribe algo..." style="width:100%; background:#020617; border:1px solid #1f2937; padding:10px; color:white; border-radius:10px; outline:none;">
+        </div>
+    </aside>
+</div>
+
+</body>
+</html>

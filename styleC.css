@@ -1,0 +1,206 @@
+        :root {
+            --madrid-gold: #c9a227;
+            --barca-red: #a50044;
+            --text-main: #ffffff;
+            --text-muted: #a0aec0;
+            --bg-dark: #050509;
+            --nav-bg: rgba(5, 5, 9, 0.85);
+            --ease: cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            margin: 0;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+  
+        nav {
+            background: var(--nav-bg);
+            height: 70px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+            transition: all 0.3s var(--ease);
+        }
+
+        .nav-container {
+            width: 100%;
+            max-width: 1400px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        .brand {
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-main);
+        }
+
+        .btn-inicio {
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 10px 25px;
+            border-radius: 2px;
+            font-weight: 400;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            transition: all 0.4s var(--ease);
+        }
+
+        .btn-inicio:hover {
+            background: var(--text-main);
+            color: var(--bg-dark);
+            border-color: var(--text-main);
+        }
+
+
+        .match-hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-color: #000;
+        }
+
+
+        .background-split {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            z-index: 1;
+        }
+
+        .bg-side {
+            flex: 1;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            filter: grayscale(30%) brightness(40%);
+            transition: filter 0.6s var(--ease);
+        }
+
+        .madrid-bg { 
+            background-image: url('https://images.unsplash.com/photo-1620914620163-96e0f3148107?q=80&w=1600&auto=format&fit=crop'); 
+        }
+        .barca-bg { 
+            background-image: url('https://images.unsplash.com/photo-1577223625816-7546f13df25d?q=80&w=1600&auto=format&fit=crop'); 
+        }
+
+        .overlay-gradient {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to top, var(--bg-dark), transparent);
+            z-index: 2;
+        }
+
+        .main-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        .supra-title {
+            font-size: 0.8rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--madrid-gold);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .match-title {
+            font-size: 6rem;
+            font-weight: 900;
+            margin: 0;
+            letter-spacing: -3px;
+            line-height: 0.9;
+            text-transform: uppercase;
+        }
+
+        .match-title span.vs {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 4rem;
+            color: var(--text-muted);
+            margin: 0 15px;
+            letter-spacing: 0;
+        }
+
+        .venue-info {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.6rem;
+            color: var(--text-main);
+            margin: 25px 0;
+        }
+
+        .countdown {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .time-box {
+            text-align: center;
+        }
+
+        .time-box span {
+            display: block;
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+        .time-box label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            display: block;
+        }
+
+        .separator {
+            font-size: 2rem;
+            color: rgba(255,255,255,0.1);
+            padding-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .match-title { font-size: 3rem; letter-spacing: -1px; }
+            .match-title span.vs { font-size: 2rem; margin: 0 5px; }
+            .venue-info { font-size: 1.2rem; }
+            .countdown { gap: 15px; }
+            .time-box span { font-size: 2rem; }
+            .separator { display: none; }
+        }
+    

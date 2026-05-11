@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario 2026 | Fútbol Total</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/53/53283.png">
+   <link rel="stylesheet" href="styleP.css">
+</head>
+<body>
+
+<header class="main-nav">
+    <div class="nav-container">
+        <div class="logo" onclick="window.location.href='index.html'">Fútbol<span>Total</span></div>
+        <div class="nav-links">
+            <a onclick="window.location.href='index.html'">Inicio</a>
+            <a onclick="window.location.href='noticias.html'">Noticias</a>
+            <a onclick="window.location.href='fichajes.html'">Fichajes</a>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <div class="header-section">
+        <h1>Central de Partidos</h1>
+        <p>Temporada 2025/26 • Calendario y Resultados en vivo.</p>
+    </div>
+
+    <div class="controls-wrapper">
+        <input type="text" id="search" class="search-box" placeholder="Buscar equipo o ciudad..." oninput="render()">
+        
+        <div class="filter-group">
+            <button class="filter-btn active" id="btn-all" onclick="filterComp('all')">Todos los torneos</button>
+            <button class="filter-btn" id="btn-ucl" onclick="filterComp('UCL')">Champions League</button>
+            <button class="filter-btn" id="btn-liga" onclick="filterComp('LaLiga')">LaLiga</button>
+        </div>
+    </div>
+
+    <div id="grid" class="grid">
+        </div>
+</main>
+
+<footer>
+    © 2026 Fútbol Total • Todos los datos están actualizados al instante ⚽
+</footer>
+
+<script src="scriptP.js"></script>
+
+</body>
+</html>

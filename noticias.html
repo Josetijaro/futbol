@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias Fútbol 2026 | Fútbol Total</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/53/53283.png">
+    <link rel="stylesheet" href="styleN.css">
+    
+</head>
+<body>
+
+<header class="main-nav">
+    <div class="nav-container">
+        <div class="logo" onclick="window.location.href='index.html'">Fútbol<span>Total</span></div>
+        <div class="nav-links">
+            <a onclick="window.location.href='index.html'">Inicio</a>
+            <a onclick="window.location.href='partidos.html'">Partidos</a>
+            <a onclick="window.location.href='fichajes.html'">Fichajes</a>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="header-section">
+        <h1>Football Insider</h1>
+        <p>Exclusivas, mercado y el día a día del deporte rey.</p>
+    </div>
+
+    <div class="search-wrapper">
+        <input type="text" id="newsSearch" placeholder="Buscar noticias, jugadores o equipos..." oninput="filterNews()">
+    </div>
+
+    <div id="newsGrid" class="news-grid">
+        </div>
+</div>
+
+<footer>
+    © 2026 Fútbol Total • Información al instante ⚽
+</footer>
+
+<script src="scriptN.js"></script>
+
+</body>
+</html>

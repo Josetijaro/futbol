@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mercado 2026 | Fútbol Total</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/53/53283.png">
+  <link rel="stylesheet" href="styleF.css">
+
+</head>
+<body>
+
+  <header>
+    <div class="nav">
+      <div class="logo" onclick="window.location.href='index.html'">Fútbol<span>Total</span></div>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="partidos.html">Partidos</a>
+        <a href="fichajes.html" style="color:var(--green)">Fichajes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="header-section">
+      <h1>Mercado de Verano 2026</h1>
+      <p>Sigue los movimientos oficiales y los rumores más calientes del mundo.</p>
+    </div>
+
+    <div class="controls-wrapper">
+      <input type="text" id="playerSearch" class="search-box" placeholder="Buscar jugador o equipo..." onkeyup="filterEverything()">
+      
+      <div class="filters" id="filterContainer">
+        <div class="filter-pill active" onclick="setFilter('todos', this)">Todos</div>
+        <div class="filter-pill" onclick="setFilter('oficial', this)">Oficiales</div>
+        <div class="filter-pill" onclick="setFilter('rumor', this)">Rumores</div>
+      </div>
+    </div>
+
+    <div class="transfer-grid" id="transferGrid">
+      
+      <div class="transfer-card" data-status="oficial">
+        <div class="player-header">
+          <span style="font-size:24px">🇳🇴</span>
+          <div><span class="player-pos">Delantero</span><span class="player-name">Erling Haaland</span></div>
+        </div>
+        <div class="deal-flow">
+          <div class="club-box"><span class="club-name">Man. City</span><span class="club-label">Origen</span></div>
+          <div class="arrow">→</div>
+          <div class="club-box"><span class="club-name">Real Madrid</span><span class="club-label">Destino</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="status-tag status-oficial">OFICIAL</span>
+          <span class="price">180M €</span>
+        </div>
+      </div>
+
+      <div class="transfer-card" data-status="rumor">
+        <div class="player-header">
+          <span style="font-size:24px">🇪🇸</span>
+          <div><span class="player-pos">Extremo</span><span class="player-name">Nico Williams</span></div>
+        </div>
+        <div class="deal-flow">
+          <div class="club-box"><span class="club-name">Athletic</span><span class="club-label">Actual</span></div>
+          <div class="arrow">?</div>
+          <div class="club-box"><span class="club-name">Chelsea FC</span><span class="club-label">Interés</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="status-tag status-rumor">RUMOR</span>
+          <span class="price">Cláus. 60M €</span>
+        </div>
+      </div>
+
+      <div class="transfer-card" data-status="oficial">
+        <div class="player-header">
+          <span style="font-size:24px">🇩🇪</span>
+          <div><span class="player-pos">Mediapunta</span><span class="player-name">Florian Wirtz</span></div>
+        </div>
+        <div class="deal-flow">
+          <div class="club-box"><span class="club-name">B. Leverkusen</span><span class="club-label">Origen</span></div>
+          <div class="arrow">→</div>
+          <div class="club-box"><span class="club-name">FC Barcelona</span><span class="club-label">Destino</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="status-tag status-oficial">OFICIAL</span>
+          <span class="price">115M €</span>
+        </div>
+      </div>
+
+      <div class="transfer-card" data-status="rumor">
+        <div class="player-header">
+          <span style="font-size:24px">🇩🇪</span>
+          <div><span class="player-pos">Centrocampista</span><span class="player-name">Jamal Musiala</span></div>
+        </div>
+        <div class="deal-flow">
+          <div class="club-box"><span class="club-name">Bayern</span><span class="club-label">Actual</span></div>
+          <div class="arrow">?</div>
+          <div class="club-box"><span class="club-name">Man. City</span><span class="club-label">Interés</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="status-tag status-rumor">RUMOR</span>
+          <span class="price">145M €</span>
+        </div>
+      </div>
+
+      <div class="transfer-card" data-status="oficial">
+        <div class="player-header">
+          <span style="font-size:24px">🇨🇦</span>
+          <div><span class="player-pos">Lateral</span><span class="player-name">Alphonso Davies</span></div>
+        </div>
+        <div class="deal-flow">
+          <div class="club-box"><span class="club-name">Bayern</span><span class="club-label">Origen</span></div>
+          <div class="arrow">→</div>
+          <div class="club-box"><span class="club-name">Real Madrid</span><span class="club-label">Destino</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="status-tag status-oficial">OFICIAL</span>
+          <span class="price">Libre</span>
+        </div>
+      </div>
+
+      <div class="transfer-card" data-status="rumor">
+        <div class="player-header">
+          <span style="font-size:24px">🇵🇹</span>
+          <div><span class="player-pos">Extremo</span><span class="player-name">Rafael Leão</span></div>
+        </div>
+        <div class="deal-flow">
+          <div class="club-box"><span class="club-name">AC Milan</span><span class="club-label">Actual</span></div>
+          <div class="arrow">?</div>
+          <div class="club-box"><span class="club-name">PSG</span><span class="club-label">Interés</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="status-tag status-rumor">RUMOR</span>
+          <span class="price">110M €</span>
+        </div>
+      </div>
+
+      <div class="transfer-card" data-status="oficial">
+        <div class="player-header">
+          <span style="font-size:24px">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+          <div><span class="player-pos">Lateral</span><span class="player-name">Trent Alexander-Arnold</span></div>
+        </div>
+        <div class="deal-flow">
+          <div class="club-box"><span class="club-name">Liverpool</span><span class="club-label">Origen</span></div>
+          <div class="arrow">→</div>
+          <div class="club-box"><span class="club-name">Real Madrid</span><span class="club-label">Destino</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="status-tag status-oficial">OFICIAL</span>
+          <span class="price">Libre</span>
+        </div>
+      </div>
+
+      <div class="transfer-card" data-status="rumor">
+        <div class="player-header">
+          <span style="font-size:24px">🇪🇸</span>
+          <div><span class="player-pos">Pivote</span><span class="player-name">Rodri Hernández</span></div>
+        </div>
+        <div class="deal-flow">
+          <div class="club-box"><span class="club-name">Man. City</span><span class="club-label">Actual</span></div>
+          <div class="arrow">?</div>
+          <div class="club-box"><span class="club-name">FC Barcelona</span><span class="club-label">Interés</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="status-tag status-rumor">RUMOR</span>
+          <span class="price">95M €</span>
+        </div>
+      </div>
+
+      <div class="transfer-card" data-status="oficial">
+        <div class="player-header">
+          <span style="font-size:24px">🇦🇷</span>
+          <div><span class="player-pos">Delantero</span><span class="player-name">Lautaro Martínez</span></div>
+        </div>
+        <div class="deal-flow">
+          <div class="club-box"><span class="club-name">Inter Milan</span><span class="club-label">Origen</span></div>
+          <div class="arrow">→</div>
+          <div class="club-box"><span class="club-name">PSG</span><span class="club-label">Destino</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="status-tag status-oficial">OFICIAL</span>
+          <span class="price">105M €</span>
+        </div>
+      </div>
+
+      <div class="transfer-card" data-status="rumor">
+        <div class="player-header">
+          <span style="font-size:24px">🇫🇷</span>
+          <div><span class="player-pos">Defensa</span><span class="player-name">William Saliba</span></div>
+        </div>
+        <div class="deal-flow">
+          <div class="club-box"><span class="club-name">Arsenal</span><span class="club-label">Actual</span></div>
+          <div class="arrow">?</div>
+          <div class="club-box"><span class="club-name">Real Madrid</span><span class="club-label">Interés</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="status-tag status-rumor">RUMOR</span>
+          <span class="price">85M €</span>
+        </div>
+      </div>
+
+      <div class="transfer-card" data-status="oficial">
+        <div class="player-header">
+          <span style="font-size:24px">🇳🇱</span>
+          <div><span class="player-pos">Centrocampista</span><span class="player-name">Xavi Simons</span></div>
+        </div>
+        <div class="deal-flow">
+          <div class="club-box"><span class="club-name">PSG</span><span class="club-label">Origen</span></div>
+          <div class="arrow">→</div>
+          <div class="club-box"><span class="club-name">Bayern</span><span class="club-label">Destino</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="status-tag status-oficial">OFICIAL</span>
+          <span class="price">70M €</span>
+        </div>
+      </div>
+
+      <div class="transfer-card" data-status="rumor">
+        <div class="player-header">
+          <span style="font-size:24px">🇬🇪</span>
+          <div><span class="player-pos">Extremo</span><span class="player-name">Kvaratskhelia</span></div>
+        </div>
+        <div class="deal-flow">
+          <div class="club-box"><span class="club-name">Napoli</span><span class="club-label">Actual</span></div>
+          <div class="arrow">?</div>
+          <div class="club-box"><span class="club-name">Liverpool</span><span class="club-label">Interés</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="status-tag status-rumor">RUMOR</span>
+          <span class="price">90M €</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+ <script src="scriptF.js"></script>
+</body>
+</html>
